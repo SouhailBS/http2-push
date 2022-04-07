@@ -1,0 +1,54 @@
+{
+    "name": "souhail/laravel-http2-push",
+    "description": "",
+    "keywords": [
+        "souhail",
+        "laravel-http2-push"
+    ],
+    "homepage": "https://github.com/souhail/laravel-http2-push",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Souhail Ben Slimene",
+            "email": "souhail.b.slimene@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Souhail\\LaravelHttp2Push\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Souhail\\LaravelHttp2Push\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Souhail\\LaravelHttp2Push\\LaravelHttp2PushServiceProvider"
+            ],
+            "aliases": {
+                "LaravelHttp2Push": "Souhail\\LaravelHttp2Push\\LaravelHttp2PushFacade"
+            }
+        }
+    }
+}
